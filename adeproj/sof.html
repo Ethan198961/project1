@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second-order-filter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+     body{
+      font-family: sans-serif;
+    }
+     .text-box{
+       opacity: 0;
+       /* transition: all 1s ease-in; */
+     }
+    .acti{
+      opacity: 1;
+    }
+
+    .box img{
+      width: 220px;
+    }
+    ul li{
+      list-style: none;
+      margin: 10px 0px;
+    list-style-type: disclosure-closed;
+    }
+    ol li{
+      list-style-type: lower-alpha;
+    }
+    @media only screen and (min-width: 768px){
+     body{
+      font-size: 2rem;
+     } 
+     .box img{
+      width: 420px;
+    }
+    }
+   
+  </style>
+  
+</head>
+
+<body onload="myfunc1()">
+  <div class="main">
+    <div class="text-box">
+      <div class="box">
+        <h2>Second Order Active Filter</h2>
+      <ul>
+        <li><h4>Generalized Second Order filter</h4>
+        <ul>
+          <li>Figure shows the generalized form of a second-order Butterworth active filter. Butterworth filter, also called maximally flat filter, offers a relatively flat pass and stop band response but has the disadvantage of relatively sluggish roll-off. Other commonly used filters are the Chebychev and Cauer filters, Chebychev filters offer much faster roll-off but their pass band has ripple. Cauer filters have rippled pass and stop bands. There are other types of filters such as Bessel filters with their unique properties. Discussion on all these types is beyond the scope of the present text.</li>
+          <p>In the case of generalized form of second-order Butterworth filter, shown in Figure , we have the following:</p>
+          <ol>
+            <li>If Z1=Z1= R and Z3=Z4=C, we get a second-order low-pass filter.</li>
+            <li>If Z1=Z1= C and Z3=Z4=R we get a second-order high-pass filter.</li>
+          </ol> 
+        </ul>
+        <img src="pbfreq.jpg" alt="">
+        <img src="pbgain.jpg" alt="">
+        
+        
+        <img src="sof.png" alt="">
+        
+        </li>
+        <li><h4>Band Pass Filter</h4>
+        <h6> &gt; Narrow band pass</h6>
+        
+          
+        <li>Band-pass filters can be formed by cascading the high-pass and the low-pass filter sections in series. These filters are simple to design and offer large bandwidth. To construct a narrow band-pass filter, one needs to. employ multiple feedback as shown in the Figure. At very low frequencies, C, and C₁ offer very high reactance. As a result, the input signal is prevented from reaching the output. At very high frequencies, the output is shorted to the inverting input, which converts the circult to an inverting amplifier with zero gain. Again, there is no output. Thus at both very low and very high frequencies, the output is zero. At some intermediate band of frequencies, the gain provided by the circuit offsets the loss due to the potential divider R-R.</li>
+        </ul>
+        <img src="frfreq.jpg" alt="">
+        <img src="nbr.jpg" alt="">
+        <iframe src="https://www.youtube.com/embed/27tJMuD3KLE?si=zF7Zo6FWIfao6503" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <li><h4>Band Reject Filter</h4>
+        <ul>
+          <li>Band-reject filters can be implemented by simming together the outputs of the low-pass and high-pass filters. These filters are simple to design and have a broad reject frequency range.
+          </li>
+          <li>
+            Figure below shows the circuit diagram of second-order narrow band reject filter. It uses a twin-T network that is connected in series with the non inverting input of the op-amp. A twin-T network offers very high reactance at the resonance frequency and very low reactance at frequencies off-resonance. This phenomenon explains the behavior of the circuir. Another way of explaining the behavior of the circuit is as follows. Very low frequency signals find their way to the output via the low-pass filter formed by R_{1}-R_{2}-C_{3}. Very high frequency signals reach the output through the high-pass filter constituted by C_{1}-C_{2}-R_{3}. an intermediate band of frequencies, both filters pass the signal to some extent but the negative phase shift introduced by low-pass filter is cancelled out by an identical positive phase shift by high-pass filter with the result that at any instant, the net signal reaching the non-inverting input and hence the output is zero. Component values of the twin-T nerwork are chosen according to the follow- ing equations</li>
+        </ul>
+        <img src="brf.jpg" alt="">
+        
+        <img src="sbr.jpg" alt="">
+        <iframe  src="https://www.youtube.com/embed/xGEtlYR33EM?si=qIti2BexZIjxI7M7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        </li>
+      </ul>
+      </div>
+
+    </div>
+    <button class="print" onclick="window.print()">PrintPage</button>
+  </div>
+  <script>
+    function myfunc1() {
+      let bb = document.querySelector('.text-box');
+      bb.classList.add('acti');
+    }
+  </script>
+</body>
+
+</html>

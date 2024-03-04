@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First-order-filter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      font-family: sans-serif;
+    }
+     .text-box{
+       opacity: 0;
+       /* transition: all 1s ease-in; */
+     }
+    .acti{
+      opacity: 1;
+    }
+    
+    .box img{
+      width: 320px;
+    }
+    ul li{
+      list-style: none;
+      margin: 10px 0px;
+    list-style-type: disclosure-closed;
+  }
+  @media only screen and (min-width: 768px){
+       body{
+        font-size: 2rem;
+       } 
+       .box img{
+      width: 420px;
+    }
+      }
+  </style>
+  
+</head>
+
+<body onload="myfunc1()">
+  <div class="main">
+    <div class="text-box">
+      <div class="box">
+        <h2>First Order active filters</h2>
+        <ol>
+          <li><h4>Low-Pass filter</h4>
+          
+            <p>
+              <ul>
+              <li>A low-pass filter is an electronic circuit or signal processing algorithm that allows low-frequency signals to pass through while attenuating (reducing the amplitude of) high-frequency signals. It's commonly used in audio applications, communications systems, and various other electronic devices to remove high-frequency noise or unwanted signals.</li>
+              <li>In the frequency domain, a low-pass filter has a characteristic that attenuates frequencies above a certain cutoff frequency while allowing frequencies below that cutoff to pass with minimal attenuation. The specific cutoff frequency and the rate of attenuation beyond that frequency depend on the design of the filter.</li>
+              <li>Low-pass filters can be implemented using various electronic components such as resistors, capacitors, and inductors, or through digital signal processing techniques in software. They are essential in many applications where it's necessary to isolate or extract low-frequency components from a signal while suppressing higher-frequency components.</li>
+              </ul>
+            </p>
+              <img src="lpfor.jpg" alt="">
+              <img src="lp.gif" alt="">
+              <iframe src="https://www.youtube.com/embed/4ldeuwE1eQg?si=QTB68-rhlOhc-7A_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </li>
+          <li><h4>high-pass filter</h4>
+          <p>
+            <ul>
+              <li>In signal processing, a high-pass filter is a type of filter that allows signals with a frequency higher than a certain cutoff frequency to pass through it while attenuating (reducing the amplitude of) signals with frequencies lower than the cutoff frequency. High-pass filters are commonly used in various applications such as audio processing, image processing, and telecommunications.</li>
+
+              <li>The design of a high-pass filter involves selecting a cutoff frequency, which determines the point at which the filter begins to attenuate lower frequency signals. There are different types of high-pass filters, including passive filters (which use passive electronic components like resistors, capacitors, and inductors) and active filters (which incorporate active components like operational amplifiers).</li>
+              
+              
+              <li>High-pass filters are useful for tasks such as removing low-frequency noise from signals, emphasizing high-frequency components, and separating high-frequency and low-frequency components in a signal. They are often employed in combination with low-pass filters to create band-pass filters, which only allow signals within a certain frequency range to pass through.</li>
+              
+            </ul>
+            <img src="hpfor.jpg" alt="">
+            <img src="hp.png" alt="">
+          </p>
+          </li>
+          <li><h4>with gain low pass</h4>
+            <p>
+              <ul>
+                <li>A low-pass filter with gain is a type of filter that allows signals with frequencies lower than a certain cutoff frequency to pass through while also amplifying them. This type of filter combines the characteristics of a low-pass filter, which attenuates high-frequency signals, with the ability to increase the amplitude (gain) of the passed signals.</li>
+                
+<li>Low-pass filters with gain are commonly used in audio processing and equalization applications, where it's desired to emphasize certain low-frequency components of a signal while attenuating higher frequencies. These filters can be implemented using various circuit configurations, including active filter designs that incorporate operational amplifiers.</li>
+
+<li>The design of a low-pass filter with gain involves selecting parameters such as the cutoff frequency, gain level, and the desired frequency response characteristics. Careful consideration is necessary to ensure that the filter meets the specific requirements of the application, such as the desired frequency range and the amount of gain needed.</li>
+<li>Overall, low-pass filters with gain are versatile tools in signal processing, allowing for targeted amplification and manipulation of low-frequency components while suppressing unwanted high-frequency content</li>
+
+              </ul>
+            </p>
+            <img src="lpwg.png" alt="">
+            <iframe src="https://www.youtube.com/embed/O0C-UU0hgq8?si=PKkcnjYAGpjMBCOW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </li>
+          <li><h4>with gain high pass</h4>
+              <p>
+                <ul>
+                  <li>high-pass filter with gain is a type of filter that allows signals with frequencies higher than a certain cutoff frequency to pass through while also amplifying them. This type of filter combines the characteristics of a high-pass filter, which attenuates low-frequency signals, with the ability to increase the amplitude (gain) of the passed signals.</li>
+      
+                  <li>High-pass filters with gain are commonly used in audio processing, where it's desired to emphasize certain high-frequency components of a signal while attenuating lower frequencies. They can also be found in various other applications such as telecommunications, instrumentation, and control systems.</li>
+                    
+                    <li>These filters can be implemented using different circuit configurations, including active filter designs that incorporate operational amplifiers. The design parameters typically include the cutoff frequency, gain level, and desired frequency response characteristics.</li>
+                    
+                    <li>By carefully selecting these parameters, a high-pass filter with gain can be tailored to meet specific application requirements, such as the desired frequency range, the amount of gain needed, and the desired level of attenuation for frequencies below the cutoff frequency.</li>
+                    
+                    <li>In summary, high-pass filters with gain are valuable tools in signal processing, allowing for targeted amplification and manipulation of high-frequency components while attenuating unwanted low-frequency content.</li>
+                </ul>
+              </p>
+          
+            <img src="hpwg.png" alt="not-found">
+        </li>
+          <li><h4>low pass with inverting configuration</h4>
+            <ul>
+              <li>A first-order low-pass filter with an inverting configuration is a circuit typically constructed using an operational amplifier (op-amp) and two passive components: a resistor (R)  and a capacitor (c). The input signal is applied to the inverting (-) input terminal of the op-amp, and the output is taken from the op-amp's output terminal. The capacitor is placed in series with the input resistor ( R ) in the op-amp's feedback loop. 
+              </li>
+              <li>              
+              This configuration allows lower frequency signals to pass through while attenuating higher frequency signals. The cutoff frequency ( fc ) of the filter is determined by the values of the resistor and capacitor, and the gain in the passband is determined by the ratio of the feedback resistor to the input resistor.</li>
+            </ul>
+            <img src="clp.jpg" alt="not-found">
+          </li>
+          <li><h4>high pass with inverting configuration</h4>
+            <ul>
+              <li>A first-order high-pass filter with an inverting configuration is a circuit typically built using an operational amplifier (op-amp) and two passive components: a resistor ( R ) and a capacitor (C). The input signal is applied to the inverting (-) input terminal of the op-amp, and the output is taken from the op-amp's output terminal.
+              </li>
+              <li>
+                The capacitor is placed in parallel with the feedback resistor ( R ) in the op-amp's feedback loop. This configuration allows higher frequency signals to pass through while attenuating lower frequency signals. The cutoff frequency (f_c) of the filter is determined by the values of the resistor and capacitor, and the gain in the passband is determined by the ratio of the feedback resistor to the input resistor.</li>
+                
+              
+            </ul>
+
+            <img src="chp.png" alt="not-found">
+          </li>
+        </ol>
+      </div>
+
+    </div>
+    <button class="print" onclick="window.print()">PrintPage</button>
+  </div>
+  <script>
+    function myfunc1() {
+      let bb = document.querySelector('.text-box');
+      bb.classList.add('acti');
+    }
+  </script>
+</body>
+
+</html>
